@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* this will determine the colour of the my website */
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(154, 102, 65);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 0px 150px;
+    /* I want the nave at the top in the whole website thats why I will keep the nav fixed */
+    position: fixed;
+}
+
+#nav img{
+    height: 70px;
+}
+
+/* to make the text uppercase */
+#nav h4{ 
+    text-transform: uppercase;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
