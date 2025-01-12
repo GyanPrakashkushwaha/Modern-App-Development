@@ -8,7 +8,7 @@ python -m venv .venv-name
 source .venv-name-env/bin/activate
 ```
 
-### to see all the installed `Packages` 
+### to see all the installed `Packages`
 ```Python
 pip freeze
 ```

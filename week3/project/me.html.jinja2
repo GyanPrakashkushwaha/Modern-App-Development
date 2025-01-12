@@ -19,24 +19,16 @@
           </tr>
         </thead>
         <tbody>
+          {% for d in data%}
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td> {{d['id']}}</td>
+            <td> {{d['first']}}</td>
+            <td> {{d['last']}}</td>
+            <td> {{d['handle']}}</td>
+
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>@twitter</td>
-            <td>Jacob</td>
-          </tr>
+
+          {% endfor %}
         </tbody>
       </table>
 
