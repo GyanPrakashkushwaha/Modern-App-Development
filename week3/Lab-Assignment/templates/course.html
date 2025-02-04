@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Data</title>
+</head>
+<body>
+    <h1>Course Details</h1>
+    <table border="1px solid">
+        <tbody>
+            <tr>
+                <th>Average Marks</th>
+                <th>Maximum Marks</th>
+            </tr>
+            <tr>
+                <td>{{avg_marks}}</td>
+                <td>{{max_marks}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="{{ url_for('static', filename='lab_assi.png') }}" alt="IMG">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student data</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <table border="1px solid">
+        <tbody>
+            <tr>
+                {% for head in table_data.columns%}
+                    <th>{{head}}</th>
+                {% endfor %}
+            </tr>
+            
+        {% for row in table_data.values%}
+        <tr>
+            {% for val in row%}
+                <td>{{val}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+            <tr>
+                <td colspan="2">Total Marks</td>
+                <td>{{submation}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
