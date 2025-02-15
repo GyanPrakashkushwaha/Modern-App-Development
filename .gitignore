@@ -1,5 +1,6 @@
 /project/.jinja-venv
 /week3/project/.jinja-venv
+.mad1env/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

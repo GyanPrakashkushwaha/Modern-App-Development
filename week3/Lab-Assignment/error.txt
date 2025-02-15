@@ -1,0 +1,47 @@
+{
+    "Test1": {
+        "Description": "Test case to audit whether app.py exist",
+        "Status": "Passed",
+        "weight": 0
+    },
+    "Test2": {
+        "Description": "Test case to audit whether end point '/' with student_id and id_value responding with 200 ok ",
+        "Status": "Passed",
+        "weight": 10
+    },
+    "Test3": {
+        "Description": "Test case to audit the Student Details table entries except last row",
+        "Status": "Passed",
+        "weight": 20
+    },
+    "Test4": {
+        "Description": "Test case to audit the Total Marks in Student Details table",
+        "Status": "Passed",
+        "weight": 10
+    },
+    "Test5": {
+        "Description": "Test case to audit whether end point '/' with course_id and id_value responding with 200 ok ",
+        "Status": "Passed",
+        "weight": 10
+    },
+    "Test6": {
+        "Description": "Test case to audit the Course details table",
+        "Status": "Passed",
+        "weight": 20
+    },
+    "Test7": {
+        "Description": "Test case to validate wrong inputs for a course",
+        "Status": "Passed",
+        "weight": 10
+    },
+    "Test8": {
+        "Description": "Test case to validate wrong inputs for a student",
+        "Status": "Passed",
+        "weight": 10
+    },
+    "Test9": {
+        "Description": "Test case to audit if form exists",
+        "Status": "Passed",
+        "weight": 10
+    }
+}
