@@ -63,8 +63,40 @@ def create_student():
             return redirect(url_for('home'))
         
         return render_template('exists.html')
+
+@app.route('/student/<int:student_id>', methods=['GET','POST'])
+def view(student_id):
+    details_s = Student.query.filter_by(student_id = student_id).first()
+    enrollments = Enrollments.query.filter_by(estudent_id=student_id).all()
+    courses = []
+    for enrollment in enrollments:
+        course = Course.query.filter_by(course_id = enrollment.ecourse_id).first()
+        if course:
+            courses.append(course)
+    
+    return render_template('about.html',courses=courses,student=details_s)
+
         
+@app.route('/student/<int:student_id>/update', methods=['GET','POST'])
+def update(student_id):
+    if request.method == 'GET':
+        row = Student.query.filter_by(student_id=student_id).first()
+        enrolls = Enrollments.query.filter_by(student_id=student_id)
+        cid = [enroll.ecourse_id for enroll in enrolls]
+        return render_template('update.html',row=row,cid=cid)
+    
+    elif request.method == 'POST':
+        stud = Student.query.filter_by(student_id).first()
+        stud.first_name = request.form.get('f_name')
+        stud.last_name = request.form.get('l_name')
+        Enrollments.query.filter_by(estudent_id = student_id).delete()
         
+        for course in request.form.getlist('courses'):
+            db.session.add(estudent_id = student_id, ecourse_id= Course.courses[course])
+            db.session.commit()
         
+        return redirect('/')
+        
+
 if __name__== '__main__':
     app.run(debug=True)
