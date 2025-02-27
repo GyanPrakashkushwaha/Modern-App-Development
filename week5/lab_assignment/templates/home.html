@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <h1> Student Details</h1>
-    {% if student|length !=0 %}
+    <h1>Student List</h1>
+    {% if student %}
     <table id="all-students">
         <tr>
             <th>SNo</th>
@@ -18,13 +18,12 @@
             <th>Last Name</th>
             <th>Actions</th>
         </tr>
-        {% for student in students %}
+        {% for stud in student%}
         <tr>
-            <td>{{ loop.index }}</td>
-            <td><a href="/student/<int:student_id>">{{ student.roll_number}}</a></td>
-            <td>{{ student.first_name }}</td>
-            <td>{{ student.last_name }}</td>
-
+            <td>s_no_1</td>
+            <td><a href="/student/<int:student_id>">roll_number_1</a></td>
+            <td>first_name_1</td>
+            <td>last_name_1</td>
             <td>
                 <a href="/student/<int:student_id>/update" type="button">Update</a>
                 <a href="/student/<int:student_id>/delete" type="button">Delete</a>
@@ -32,12 +31,10 @@
         </tr>
         {% endfor %}
     </table>
-
     {% else %}
-    <p>No Students Found. Add students now!</p>
+    <p>No student Found. Add new student now</p>
     {% endif %}
     <a href="/student/create" type="button">+Add Button</a>
-
 </body>
 
 </html>
