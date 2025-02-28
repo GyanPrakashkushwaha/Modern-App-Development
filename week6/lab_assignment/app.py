@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, make_response
+from flask import Flask, make_response
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api, fields, marshal_with, reqparse
 from werkzeug.exceptions import HTTPException
@@ -285,14 +285,15 @@ class EnrollmentAPI(Resource):
 
 
 # Recourses (URL to fetch the content).
-api.add_resource(CourseAPI,'/api/course/<int:course_id>', '/api/course')
-api.add_resource(StudentAPI,'/api/student/<int:student_id>', '/api/student')
+api.add_resource(CourseAPI, '/api/course','/api/course/<int:course_id>')
+api.add_resource(StudentAPI, '/api/student','/api/student/<int:student_id>')
 api.add_resource(EnrollmentAPI, '/api/student/<int:student_id>/course')
 
 
 if __name__ == '__main__':
     app.run(debug=True)
 
+# 23f3004091
 
 
 
